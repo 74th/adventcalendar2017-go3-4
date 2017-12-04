@@ -2,7 +2,7 @@
 
 アドベントカレンダーGo3 11/4のコードです。
 
-https://qiita.com/74th/private/0362bea2012ef253c539
+https://qiita.com/74th/items/0362bea2012ef253c539
 
 CでGOのポインタを扱う方法と、GoでCのポインタを扱う方法を紹介する。
 

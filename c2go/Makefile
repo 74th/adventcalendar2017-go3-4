@@ -1,5 +1,5 @@
-do:c2go.go libc2go.so
-	go run c2go.go
+do:c2go libc2go.so
+	./c2go
 
 c2go:c2go.go libc2go.so libc2go.h
 	go build c2go.go

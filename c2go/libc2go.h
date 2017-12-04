@@ -5,3 +5,5 @@ typedef struct{
 box *createCInstance(int n);
 
 char *getCByte();
+
+void callEmpty();

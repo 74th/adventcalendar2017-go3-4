@@ -89,3 +89,7 @@ func getGoBytes() uintptr {
 	// 文字列とする
 	return uintptr(unsafe.Pointer(&buffer[0]))
 }
+
+//export callEmpty
+func callEmpty() {
+}

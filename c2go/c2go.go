@@ -6,7 +6,10 @@ import "C"
 
 import (
 	"fmt"
+	"time"
 	"unsafe"
+
+	"github.com/dustin/go-humanize"
 )
 
 func main() {
@@ -33,5 +36,21 @@ func main() {
 	cbyteSlice := cbyteArray[:7]
 	// cのバイト列をそのままスライスとして利用
 	fmt.Printf("cbyteSlice():%s\n", cbyteSlice)
+
+	count := int64(0)
+	timer := time.NewTimer(time.Second * 10)
+	fmt.Printf("CallEmtpy Test started. Wait 10 seconds.\n")
+
+LOOP:
+	for {
+		select {
+		case <-timer.C:
+			break LOOP
+		default:
+		}
+		C.callEmpty()
+		count++
+	}
+	fmt.Printf("%s calls / sec\n", humanize.Comma(count/10))
 
 }

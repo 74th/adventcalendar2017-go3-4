@@ -12,3 +12,7 @@ char *getCByte()
 {
 	return "CByte";
 }
+
+void callEmpty()
+{
+}
